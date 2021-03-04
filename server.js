@@ -1,13 +1,13 @@
 let named = require('./node_modules/named/lib/index');
 let server = named.createServer();
 let ttl = 300;
-let PORT = 9990;
+let PORT;
+process.argv.forEach(i => { if (i.toUpperCase().includes('PORT=')) PORT = parseInt(i.replace('PORT=', '')); else PORT = 9053 }); 
 
 server.listen(PORT, '127.0.0.53', function() {
   console.log('DNS server started on port ' + PORT);
 });
 
-btoa()
 
 server.on('query', function(query) {
   console.log('raw query: ', query)

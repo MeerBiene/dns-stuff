@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aero/centra": "^1.0.6",
-    "named": "github:andrewhodel/node-named"
+    "multicast-dns": "^7.2.2"
   }
 }
